@@ -7,6 +7,9 @@ const port = 3001;
 
 app.use(bodyParser.urlencoded({extended: true}))
 
+// need to set this up for CSS
+app.use(express.static(__dirname + '/public'));
+
 app.get('/', (req, res) => {
   res.sendFile(__dirname + '/signup.html')
 })
