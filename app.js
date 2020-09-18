@@ -11,9 +11,18 @@ app.use(bodyParser.urlencoded({extended: true}))
 app.use(express.static(__dirname + '/public'));
 
 app.get('/', (req, res) => {
-  res.sendFile(__dirname + '/signup.html')
+  res.sendFile(__dirname + '/signup.html');
+})
+
+app.post('/', (req, res) => {
+  console.log(req.body)
+  let firstName = req.body.firstName;
+  let lastName = req.body.lastName;
+  let email = req.body.email;
+
+  res.send("Success!" + firstName + ' ' + lastName);
 })
 
 app.listen(port, () => {
-  console.log(`Example app listening at http://localhost:${port}`)
+  console.log(`App listening at http://localhost:${port}`)
 })
