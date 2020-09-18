@@ -18,7 +18,7 @@ This project involves using a [Bootstrap template](https://getbootstrap.com/docs
 - Saving to Mailchimp newsletter
 - Success and failure pages
 - Failure page has option to redirect back to form landing page
-- App hosted on Heroku
+- Added Procfile and Heroku port with localhost port fallback to 3001 (in case you want to deploy to Heroku)
 
 ## Getting started
 
@@ -29,5 +29,5 @@ This project involves using a [Bootstrap template](https://getbootstrap.com/docs
 ```module.exports = {
   apiKey: YOUR API KEY,
   server: YOUR MAILCHIMP SERVER,
-  listId: YOUR MAILCHIMP LIST ID'
+  listId: YOUR MAILCHIMP LIST ID
 }```
