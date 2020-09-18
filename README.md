@@ -14,14 +14,20 @@ This project involves using a [Bootstrap template](https://getbootstrap.com/docs
 
 ## App features
 
-- To fill in
+- Form to enter subscriber details
+- Saving to Mailchimp newsletter
+- Success and failure pages
+- Failure page has option to redirect back to form landing page
+- App hosted on Heroku
 
 ## Getting started
 
 - Install [Node](https://nodejs.org/en/) (and NPM).
 - From a terminal, `cd` into this directory and run the command `npm install`.
 - Start the Node server in terminal with `node app.js`. Alternatively, if you have Nodemon, use `nodemon app.js`.
-
-## To do
-
-- To fill in
+- Create a `config.js` file in the root directory and add: 
+```module.exports = {
+  apiKey: YOUR API KEY,
+  server: YOUR MAILCHIMP SERVER,
+  listId: YOUR MAILCHIMP LIST ID'
+}```

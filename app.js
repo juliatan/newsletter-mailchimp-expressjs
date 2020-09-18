@@ -47,14 +47,19 @@ app.post('/', (req, res) => {
       });
 
       console.log(`Successfully added contact as an audience member. The contact's id is ${ response.id }.`);
-      res.send("Success")
+      res.sendFile(__dirname + '/success.html');
+
     } catch (error) {
-      console.log(error)
-      res.send("Error")
+      console.log(error);
+      res.sendFile(__dirname + '/failure.html');
     }
   }
 
   addSubscriber();
+})
+
+app.post('/failure', (req, res) => {
+  res.redirect('/');
 })
 
 app.listen(port, () => {
