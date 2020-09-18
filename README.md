@@ -26,8 +26,10 @@ This project involves using a [Bootstrap template](https://getbootstrap.com/docs
 - From a terminal, `cd` into this directory and run the command `npm install`.
 - Start the Node server in terminal with `node app.js`. Alternatively, if you have Nodemon, use `nodemon app.js`.
 - Create a `config.js` file in the root directory and add: 
-```module.exports = {
+```
+module.exports = {
   apiKey: YOUR API KEY,
   server: YOUR MAILCHIMP SERVER,
   listId: YOUR MAILCHIMP LIST ID
-}```
+}
+```
