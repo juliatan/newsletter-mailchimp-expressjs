@@ -1,6 +1,8 @@
 const express = require('express');
 const app = express();
-const port = 3001;
+const localPort = 3001;
+const herokuPort = process.env.PORT;
+const port = herokuPort || localPort;
 
 // mailchimp library and config
 const mailchimp = require("@mailchimp/mailchimp_marketing");
@@ -62,6 +64,6 @@ app.post('/failure', (req, res) => {
   res.redirect('/');
 })
 
-app.listen(port, () => {
+app.listen(herokuPort || localPort, () => {
   console.log(`App listening at http://localhost:${port}`)
 })
