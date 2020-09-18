@@ -9,8 +9,8 @@ This project involves using a [Bootstrap template](https://getbootstrap.com/docs
 - Some of the tools used:
   - `node`
   - `express`
-  - `axios`
   - `body-parser`
+  - `@mailchimp/mailchimp_marketing`
 
 ## App features
 
